@@ -1,0 +1,5 @@
+podname="proto-pod"
+workdir="/work-dir"
+datadir="/data"
+label_key="usedby"
+label_val="prototyping"
