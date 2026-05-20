@@ -7,16 +7,18 @@ spec:
     usedby: prototyping
   containers:
   - name: nextflow
-    image: davidfrantz/force:3.10.04
+    # image: davidfrantz/force:3.10.04
+    # image: nextflow/nextflow:26.04.0
+    image: friedricht/nf-force:latest
     imagePullPolicy: Always
     command:
       - /bin/sh
       - "-c"
       - "sleep infinity"
-    workingDir: /work-dir
+    workingDir: /work-dir/nf-work
     env:
     - name: NXF_WORK
-      value: /work-dir
+      value: /work-dir/nf-work
     - name: NXF_ANSI_LOG
       value: 'false'
     volumeMounts:

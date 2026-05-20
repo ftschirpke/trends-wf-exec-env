@@ -51,5 +51,6 @@ echo
 kubectl exec $podname -- /bin/bash -c "rm -rdf $workdir/$local_wfname $wfpath"
 kubectl cp "$local_wfpath" $podname:$workdir
 kubectl exec $podname -- /bin/bash -c "mv $workdir/$local_wfname $wfpath"
+kubectl cp "$dir/command.sh" $podname:$workdir/nf-work
 
 kubectl exec -it $podname -- /bin/bash
